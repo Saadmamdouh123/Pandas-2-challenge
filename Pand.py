@@ -1,17 +1,17 @@
 import pandas as pd
-
+import numpy as np
 data = {
     'Name' : ['Saad' , 'abdo' , 'omar'],
     'Age' : [24 , 34 , 20],
-    'Ville': ['Casablanca' , 'Casablanca' , 'Casablanca'],
+    'Ville': ['casablanca' , 'kkkkkkk' , np.nan]
 }
 
 df = pd.DataFrame(data)
-ll = df.head(1)
-ll2 = df.tail(1)
-pp = df.info()
-# print(df)
-# print(ll)
-# print(ll2)
-print(pp)
+# print(df.head())
+# print(df.tail(2))
+# print(df.info())
+# print (df.describe(include='all'))
+# print(df['Ville'])
+# print(df[df['Age'] > 10])
+print(df.loc[df['Ville'] == 'casablanca'])
 
