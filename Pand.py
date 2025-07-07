@@ -13,5 +13,11 @@ df = pd.DataFrame(data)
 # print (df.describe(include='all'))
 # print(df['Ville'])
 # print(df[df['Age'] > 10])
-print(df.loc[df['Ville'] == 'casablanca'])
+# print(df.loc[df['Ville'] == 'casablanca'])
+data = ['jjjj', 'llll', 'oooo']
+df['State'] = data
+kk = df['Name'] = df['Name'].str.upper()
+# print(kk)
+df.rename(columns={'Name': 'Full_Name', 'Ville': 'Location'}, inplace=True)# print(df)
+print(df)
 
